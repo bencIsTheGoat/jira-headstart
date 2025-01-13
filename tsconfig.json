@@ -12,6 +12,7 @@
       "@env": ["src/env/index.ts"],
       "@config": ["src/config/index.ts"],
       "@clients/*": ["src/clients/*"],
+      "@utils": ["src/utils/index.ts"]
     }
   },
   "include": ["src/**/*.ts"],
