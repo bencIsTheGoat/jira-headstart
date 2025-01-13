@@ -12,6 +12,7 @@ import { z } from "zod";
  * 5. Write result to JIRA Issue
  */
 async function main() {
+	// hardcoded
 	const JIRA_ISSUE_ID = "SCRUM-2";
 
 	const issue = await jira.issues.getIssue({
@@ -20,7 +21,6 @@ async function main() {
 	});
 
 	const repoURL = z.string().parse(issue.fields["customfield_10038"]);
-
 	const repoInfo = utils.getRepoInfo(repoURL);
 
 	switch (repoInfo.gitProvider) {
