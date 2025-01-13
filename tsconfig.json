@@ -10,6 +10,7 @@
     "noEmit": true,
     "paths": {
       "@env": ["src/env/index.ts"],
+      "@config": ["src/config/index.ts"],
       "@clients/*": ["src/clients/*"],
     }
   },

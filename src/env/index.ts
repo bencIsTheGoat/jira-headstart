@@ -29,6 +29,7 @@ import { z } from "zod";
 const envSchema = z.object({
 	OPENAI_API_KEY: z.string(),
 	GITHUB_TOKEN: z.string(),
+	JIRA_TOKEN: z.string(),
 	// Add env varibles here...
 });
 
