@@ -2,11 +2,10 @@
 	"name": "jira-headstart",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "tsc",
-		"start": "npm run build && node dist/index.js"
+		"tsc": "tsc",
+		"start": "tsx ./src/index.ts"
 	},
 	"repository": {
 		"type": "git",
@@ -27,6 +26,7 @@
 		"eslint": "^9.18.0",
 		"globals": "^15.14.0",
 		"jiti": "^2.4.2",
+		"tsx": "^4.19.2",
 		"typescript": "^5.7.3",
 		"typescript-eslint": "^8.19.1"
 	},

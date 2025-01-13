@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "module": "CommonJS",
     "strict": true,
     "outDir": "dist",
     "rootDir": "src",
     "esModuleInterop": true,
     "baseUrl": ".",
+    "noEmit": true,
     "paths": {
       "@env": ["src/env/index.ts"],
       "@clients/*": ["src/clients/*"],
