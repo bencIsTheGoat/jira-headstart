@@ -34,13 +34,21 @@ async function main() {
 			});
 			console.log(`Downloaded all repository files to tempDir: ${td}`);
 			const fileIds = await utils.readDirFiles(td);
-			await generateImplementationSteps({
+			const steps = await generateImplementationSteps({
 				summary: issue.fields.summary,
 				description: z
 					.string()
 					.parse(issue.fields.description?.content?.[0].content?.[0]?.text),
 				fileIds,
 			});
+			await jira.issueAttachments.addAttachment({
+				issueIdOrKey: JIRA_ISSUE_ID,
+				attachment: {
+					filename: "headstart.md",
+					file: z.string().parse(steps),
+				},
+			});
+			console.log("Successfully added headstart instructions to JIRA ticket");
 			return;
 		}
 		default:

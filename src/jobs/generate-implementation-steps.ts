@@ -54,7 +54,7 @@ const generateImplementationSteps = async ({
 	});
 	console.log("Generated instructions: ");
 	console.log(completion.choices[0].message.content);
-	return completion;
+	return completion.choices[0].message.content;
 };
 
 export default generateImplementationSteps;
